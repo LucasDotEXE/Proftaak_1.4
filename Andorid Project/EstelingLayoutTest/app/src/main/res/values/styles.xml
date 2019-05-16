@@ -6,6 +6,12 @@
         <item name="colorPrimary">#c42f2b</item>
         <item name="colorPrimaryDark">#c42f2b</item>
         <item name="colorAccent">#c42f2b</item>
+
     </style>
+
+    <style name= "AppThemeDark" parent="Theme.AppCompat.Light.NoActionBar">
+
+    </style>
+
 
 </resources>

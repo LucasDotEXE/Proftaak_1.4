@@ -5,16 +5,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white">
+    android:background="#466d10">
 
 
     <com.github.chrisbanes.photoview.PhotoView
         android:id="@+id/photo_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:src="@drawable/efteling_plattegrond"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="270dp" />
+        android:scaleType="centerInside"
+        android:src="@drawable/efteling_plattegrond_jpeg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
