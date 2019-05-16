@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.github.chrisbanes.photoview.PhotoView;
+
 public class MapFragment extends Fragment {
 
     @Nullable
