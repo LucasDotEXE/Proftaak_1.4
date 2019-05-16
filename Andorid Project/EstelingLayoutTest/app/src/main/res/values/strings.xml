@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">EstelingLayoutTest</string>
+    <string name="manualtitle">Handleiding</string>
+    <string name="manualcontent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc venenatis fermentum tempor. Curabitur aliquet nec arcu finibus lacinia. Praesent porttitor maximus sapien vitae tempus. Donec at quam sollicitudin felis posuere tincidunt. Nullam varius mollis tristique. Phasellus non dui auctor, sollicitudin purus ac, pretium ipsum. Maecenas dapibus ante vitae aliquet semper. Ut id dignissim massa. Vestibulum non aliquet nulla, ut imperdiet felis.  Nullam et purus eget nisi facilisis hendrerit ac vitae sapien. Curabitur maximus lorem non lectus pharetra gravida. Suspendisse blandit sed leo sed fermentum. Donec in turpis sollicitudin, posuere arcu posuere, sagittis quam. Praesent euismod, lectus eu mattis tincidunt, mauris risus vehicula felis, et posuere leo ligula sit amet est. Pellentesque pellentesque suscipit risus. Nam quis magna erat. Sed rhoncus augue est, id efficitur augue scelerisque quis. Suspendisse suscipit commodo vestibulum.</string>
+    <string name="darkthemetitle">Donker thema</string>
+    <string name="hintstitle">Hints</string>
+    <string name="soundtitle">Geluid</string>
+    <string name="languagetitle">Taal</string>
+    <string name="aboutustitle">Over ons</string>
 </resources>
