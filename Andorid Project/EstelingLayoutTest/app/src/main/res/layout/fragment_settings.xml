@@ -1,19 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/holo_orange_light">
+    android:layout_height="match_parent">
 
 
-    <TextView
-        android:id="@+id/textView2"
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <Switch
+        android:id="@+id/darkThemeSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This be Settings"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/darkThemeTitleText"
+        app:layout_constraintTop_toBottomOf="@+id/manualContentText" />
+
+    <Switch
+        android:id="@+id/hintsSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/darkThemeSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/darkThemeSwitch" />
+
+    <TextView
+        android:id="@+id/darkThemeTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/darkthemetitle"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.28"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/darkThemeSwitch" />
+
+    <TextView
+        android:id="@+id/hintsTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hintstitle"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/darkThemeTitleText"
+        app:layout_constraintTop_toTopOf="@+id/hintsSwitch" />
+
+    <TextView
+        android:id="@+id/manualContentText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/manualcontent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/manualTitleText" />
+
+    <Button
+        android:id="@+id/aboutUsButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/aboutustitle"
+        app:layout_constraintEnd_toEndOf="@+id/soundSwitch"
+        app:layout_constraintStart_toStartOf="@+id/soundTitleText"
+        app:layout_constraintTop_toBottomOf="@+id/languageTitleText" />
+
+    <Switch
+        android:id="@+id/soundSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/hintsSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/hintsSwitch" />
+
+    <TextView
+        android:id="@+id/languageTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/languagetitle"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/soundTitleText"
+        app:layout_constraintTop_toTopOf="@+id/languageSelecterSpinner" />
+
+    <Spinner
+        android:id="@+id/languageSelecterSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/soundSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/soundSwitch" />
+
+    <TextView
+        android:id="@+id/manualTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/manualtitle"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-</android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/soundTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/soundtitle"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/hintsTitleText"
+        app:layout_constraintTop_toTopOf="@+id/soundSwitch" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
