@@ -1,13 +1,11 @@
 package com.example.estelinglayouttest;
 
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.Window;
-import android.view.WindowManager;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,17 +14,19 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
-        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
-        bottomNav.setOnNavigationItemSelectedListener(navListener);
-
-
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                currentFragment).commit();
+//        requestWindowFeature(Window.FEATURE_NO_TITLE);
+//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+//        setContentView(R.layout.activity_main);
+//
+//        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
+//        bottomNav.setOnNavigationItemSelectedListener(navListener);
+//
+//
+//        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+//                currentFragment).commit();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
