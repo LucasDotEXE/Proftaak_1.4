@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     private Fragment mapFragment = new MapFragment();
     private Fragment playFragment = new PlayFragment();
     private Fragment settingsFragment = new SettingsFragment();
+    public static boolean hints = true;
+    public static boolean sound = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
