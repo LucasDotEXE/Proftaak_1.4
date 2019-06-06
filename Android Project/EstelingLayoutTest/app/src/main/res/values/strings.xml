@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Essteling</string>
     <string name="manualtitle">Handleiding</string>
-    <string name="manualcontent">Er zijn vijf knoppen en één slider waarmee u de wagen kan besturen \n De vier knoppen met pijlen gebruikt u om uw voertijg zijn richting te besturen. \m De stop knop in het midden kan u gebruiken om de wagen onmiddelijk te stoppen. \n De slider rechts gebruikt u om de snelheid te bepalen vna het voertuig. \n Wij hopen dat u veel plezier heeft in de Estelleague!</string>
+    <string name="manualcontent">Er zijn vijf knoppen en één slider waarmee u de wagen kan besturen \nDe vier knoppen met pijlen gebruikt u om uw voertijg zijn richting te besturen. \nDe stop knop in het midden kan u gebruiken om de wagen onmiddelijk te stoppen. \nDe slider rechts gebruikt u om de snelheid te bepalen vna het voertuig. \nWij hopen dat u veel plezier heeft in de Estelleague!</string>
     <string name="darkthemetitle">Donker thema</string>
     <string name="hintstitle">Hints</string>
     <string name="soundtitle">Geluid</string>
