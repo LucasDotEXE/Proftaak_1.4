@@ -1,15 +1,24 @@
 package com.example.estelinglayouttest;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
+import android.hardware.Sensor;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.OrientationHelper;
+import android.view.Display;
 import android.view.LayoutInflater;
+import android.view.Surface;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -27,7 +36,6 @@ public class SettingsFragment extends Fragment {
     private Switch hints;
     private Switch sound;
     private Button aboutUs;
-    private Spinner languages;
     private boolean darkThemeBool = false;
 
     @Nullable
@@ -85,42 +93,12 @@ public class SettingsFragment extends Fragment {
             }
         });
 
-        this.languages = view.findViewById(R.id.languageSelecterSpinner);
-        this.languages.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String item = parent.getItemAtPosition(position).toString();
-                if (item.equals("Nederlands")) {
-                    Configuration configuration = new Configuration();
-                    configuration.locale = Locale.US;
-                    getContext().getResources().updateConfiguration(configuration, getContext().getResources().getDisplayMetrics());
-                } else if (item.equals("English")) {
-                    Configuration configuration = new Configuration();
-                    configuration.locale = Locale.UK;
-                    getContext().getResources().updateConfiguration(configuration, getContext().getResources().getDisplayMetrics());
-                } else if (item.equals("Deutsch")) {
-                    Configuration configuration = new Configuration();
-                    configuration.locale = Locale.GERMANY;
-                    getContext().getResources().updateConfiguration(configuration, getContext().getResources().getDisplayMetrics());
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-        List<String> languageList = new ArrayList<>();
-        languageList.add("Nederlands");
-        languageList.add("English");
-        languageList.add("Deutsch");
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getContext(), R.layout.support_simple_spinner_dropdown_item, languageList);
-        adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
-        this.languages.setAdapter(adapter);
-
         return view;
     }
 
     public void refresh() {
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
     }
 }

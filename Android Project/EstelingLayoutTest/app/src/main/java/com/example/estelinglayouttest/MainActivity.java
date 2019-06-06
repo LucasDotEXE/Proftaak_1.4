@@ -11,11 +11,11 @@ import android.view.WindowManager;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Fragment currentFragment = new HomeFragment();
-    private Fragment homeFragment = new HomeFragment();
-    private Fragment mapFragment = new MapFragment();
-    private Fragment playFragment = new PlayFragment();
-    private Fragment settingsFragment = new SettingsFragment();
+    public static Fragment currentFragment = new HomeFragment();
+    public static Fragment homeFragment = new HomeFragment();
+    public static Fragment mapFragment = new MapFragment();
+    public static Fragment playFragment = new PlayFragment();
+    public static Fragment settingsFragment = new SettingsFragment();
     public static boolean hints = true;
     public static boolean sound = true;
 
