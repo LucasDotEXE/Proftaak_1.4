@@ -17,42 +17,57 @@ import com.example.estelinglayouttest.R;
 
 import org.eclipse.paho.android.service.MqttAndroidClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
+import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
 
-public class MainConnectionActivity {
+public class MainConnectionActivity extends AppCompatActivity {
 
     private MqttAndroidClient client;
     private PahoMqttClient pahoMqttClient;
 
+    private TextView messageBox;
+    private String messages;
+
     private MyBroadcastReceiver myBroadCastReceiver;
     static final String BROADCAST_ACTION = "com.appsfromholland.mqttpayloadavailabe";
 
-    
+
+    Button submitBtn, subscribeBtn, unsubscribeBtn;
     TextView tv;
     ImageView colorBlock;
     ConstraintLayout layout;
-    private AppCompatActivity parent;
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.test);
 
-    public MainConnectionActivity(AppCompatActivity parent) {
-        this.parent = parent;
+        this.messageBox = findViewById(R.id.message);
+
         pahoMqttClient = new PahoMqttClient();
+        this.messages = "";
+
 
         client = pahoMqttClient.getMqttClient(
-                parent.getApplicationContext(),
+                getApplicationContext(),
                 MQTTConfig.getInstance().MQTT_BROKER_URL(),
                 MQTTConfig.getInstance().CLIENT_ID());
 
+        tv = findViewById(R.id.mqttTextId);
 
+        layout = findViewById(R.id.mainLayoutId);
+
+
+        submitBtn = findViewById(R.id.publish);
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String msg = "stuff"; //Rewrite this to send the jason structure
+                String msg = tv.getText().toString().trim();
                 if( !msg.isEmpty()) {
                     try {
                         // TODO: 5/16/2019 rewrite this to send instructions for movement to a specific car
-                        pahoMqttClient.publishMessage(client, msg, 0, MQTTConfig.getInstance().PUBLISH_TOPIC());
+                        pahoMqttClient.publishMessage(client, "{ \"message\": { \"mes\": \"" + msg + "\"} }", 0, MQTTConfig.getInstance().PUBLISH_TOPIC());
                     } catch (MqttException e) {
                         e.printStackTrace();
                     } catch (UnsupportedEncodingException e) {
@@ -96,7 +111,7 @@ public class MainConnectionActivity {
         {
             IntentFilter intentFilter = new IntentFilter();
             intentFilter.addAction(BROADCAST_ACTION);
-            this.parent.registerReceiver(myBroadCastReceiver, intentFilter);
+            registerReceiver(myBroadCastReceiver, intentFilter);
         }
         catch (Exception e)
         {
@@ -105,7 +120,14 @@ public class MainConnectionActivity {
 
 
         // Start services
+        try {
+            Intent intent = new Intent(MainConnectionActivity.this, MqttMessageService.class);
+            startService(intent);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
     }
+
 
     // Defineer een eigen broadcast receiver, deze vangt alles op voor
     public class MyBroadcastReceiver extends BroadcastReceiver {
@@ -117,26 +139,28 @@ public class MainConnectionActivity {
             try
             {
                 String payload = intent.getStringExtra("payload");
+                JSONObject jsonObject = new JSONObject(payload);
+
+                JSONObject message = jsonObject.getJSONObject("message");
+                messages = message.getString("mes") + "\n" + messages;
+                messageBox.setText(messages);
                 Log.i(TAG,  payload);
-
-                try {
-
-                    // write code to recieve here
-//                    JSONObject jsonObject = new JSONObject(payload);
-//                    int red = jsonObject.getJSONObject("ledColor").getInt("r");
-//                    int green = jsonObject.getJSONObject("ledColor").getInt("g");
-//                    int blue = jsonObject.getJSONObject("ledColor").getInt("b");
-//
-//                    layout.setBackgroundColor( Color.rgb(red, green, blue) );
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-
             } catch (Exception ex)
             {
                 ex.printStackTrace();
             }
         }
+    }
+
+    /**
+     * This method called when this Activity finished
+     * Override this method to unregister MyBroadCastReceiver
+     * */
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        // make sure to unregister your receiver after finishing of this activity
+        unregisterReceiver(myBroadCastReceiver);
     }
 }

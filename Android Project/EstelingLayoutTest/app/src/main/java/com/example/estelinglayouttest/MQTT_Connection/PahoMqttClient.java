@@ -93,6 +93,8 @@ public class PahoMqttClient {
     }
 
     public void subscribe(@NonNull MqttAndroidClient client, @NonNull final String topic, int qos) throws MqttException {
+        if (client.isConnected())
+            Log.e("Magie", "basofihoginepogiheuofwifoihfosidfsaoifnsoi");
         IMqttToken token = client.subscribe(topic, qos);
         token.setActionCallback(new IMqttActionListener() {
             @Override

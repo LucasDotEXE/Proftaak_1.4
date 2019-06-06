@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.estelinglayouttest.MQTT_Connection.MainConnectionActivity;
+
 public class HomeFragment extends Fragment {
 
 
@@ -23,7 +25,7 @@ public class HomeFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(v.getContext(), Controls.class));
+                startActivity(new Intent(v.getContext(), MainConnectionActivity.class));
             }
         });
         return view;
