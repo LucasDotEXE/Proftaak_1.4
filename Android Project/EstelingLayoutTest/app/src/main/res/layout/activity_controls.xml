@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Controls">
+
+    <ImageButton
+        android:id="@+id/voorwaards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/stop"
+        app:layout_constraintEnd_toEndOf="@+id/stop"
+        app:layout_constraintStart_toStartOf="@+id/stop"
+        app:srcCompat="@drawable/up" />
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:rotation="180"
+        app:layout_constraintEnd_toEndOf="@+id/stop"
+        app:layout_constraintStart_toStartOf="@+id/stop"
+        app:layout_constraintTop_toBottomOf="@+id/stop"
+        app:srcCompat="@drawable/up" />
+
+    <ImageButton
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/stop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_recent_history" />
+
+    <ImageButton
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:rotation="270"
+        app:layout_constraintBottom_toBottomOf="@+id/stop"
+        app:layout_constraintEnd_toStartOf="@+id/stop"
+        app:layout_constraintTop_toTopOf="@+id/stop"
+        app:srcCompat="@drawable/up" />
+
+    <ImageButton
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="@+id/stop"
+        app:layout_constraintStart_toEndOf="@+id/stop"
+        app:layout_constraintTop_toTopOf="@+id/stop"
+        app:srcCompat="@drawable/up" />
+
+    <SeekBar
+        android:id="@+id/speed"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="164dp"
+        android:layout_marginEnd="8dp"
+        android:max="100"
+        android:progress="0"
+        android:rotation="270"
+        android:saveEnabled="false"
+        android:textDirection="inherit"
+        android:transformPivotX="2sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="60dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="@+id/speed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>

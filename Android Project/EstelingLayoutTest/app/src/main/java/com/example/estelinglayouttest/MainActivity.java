@@ -35,6 +35,11 @@ public class MainActivity extends AppCompatActivity {
                 currentFragment).commit();
     }
 
+    public void reload() {
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                currentFragment).commit();
+    }
+
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override

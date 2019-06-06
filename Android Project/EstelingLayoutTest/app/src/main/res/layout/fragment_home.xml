@@ -53,4 +53,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.937" />
 
+    <Button
+        android:id="@+id/temp_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temp Button"
+        tools:layout_editor_absoluteX="248dp"
+        tools:layout_editor_absoluteY="194dp"
+        tools:text="Temp Button" />
+
 </android.support.constraint.ConstraintLayout>
