@@ -61,6 +61,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:text="@string/manualcontent"
+            android:textAlignment="center"
             android:textColor="?attr/textcolor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

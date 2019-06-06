@@ -1,10 +1,11 @@
 <resources>
     <string name="app_name">Essteling</string>
     <string name="manualtitle">Handleiding</string>
-    <string name="manualcontent">Er zijn vijf knoppen en één slider waarmee u de wagen kan besturen \nDe vier knoppen met pijlen gebruikt u om uw voertijg zijn richting te besturen. \nDe stop knop in het midden kan u gebruiken om de wagen onmiddelijk te stoppen. \nDe slider rechts gebruikt u om de snelheid te bepalen van het voertuig. \nWij hopen dat u veel plezier heeft in de Estelleague!</string>
+    <string name="manualcontent">Er zijn vijf knoppen en één slider waarmee u de wagen kan besturen. \nDe vier knoppen met pijlen gebruikt u om uw voertijg zijn richting te besturen. \nDe stop knop in het midden kan u gebruiken om de wagen onmiddelijk te laten stoppen. \nDe slider rechts gebruikt u om de snelheid te bepalen van het voertuig. \nWij hopen dat u veel plezier heeft in de Esstelleague!</string>
     <string name="darkthemetitle">Donker thema</string>
     <string name="hintstitle">Hints</string>
     <string name="soundtitle">Geluid</string>
     <string name="languagetitle">Taal</string>
     <string name="aboutustitle">Over ons</string>
+    <string name="aboutuscontent" translatable="false">Wij zijn een studententeam in dienst van de Essteling, gehuurd om voor de Essteling een applicatie te maken. \nDeze applicatie is de Esstelleague, gemaakt om de wachtrij toch net iets interessanter te maken. \n \nOns team bestaat uit: \nGroepsleider - Tom Kaasenbrood \nCode-beheerder - Lucas Prins \nSecretaris - Dustin Hendriks \nEvaluator - Daphne Boulhouwers \nPlanner - Pascal de Bruijn \n \n Wij hebben dit project gemaakt voor de opdracht: \'Maak een applicatie die mensen in de Essteling meer laat interacteren met elkaar en de omgeving\'. \nUiteindelijk hebben wij gekozen voor de Esstelleague omdat wij dit idee het interessantst vonden. \nWij konden met dit idee zowel veel aan de hardware als de software doen, hierdoor hebben we erg veel geleerd gedurende het project. \n \nWe hopen dat je de app goed vindt, feedback kan verstuurd worden naar: \'support.esstelleague@essteling.nl\'</string>
 </resources>

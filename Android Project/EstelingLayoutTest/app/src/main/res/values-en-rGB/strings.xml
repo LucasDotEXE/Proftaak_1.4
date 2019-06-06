@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">EstelingLayoutTest</string>
     <string name="manualtitle">Instruction manual</string>
-    <string name="manualcontent">"There are five buttons and one slider to control the car. \nThe four buttons with arrow symbols are used to control the direction of your vehicle. \nThe stop button in the center can be used to immediately stop the vehicle. \nThe slider on the right can be used to control the speed of the vehicle. \nWe hope that you have a lot of fun in the Estelleague!"</string>
+    <string name="manualcontent">There are five buttons and one slider to control the car. \nThe four buttons with arrow symbols are used to control the direction of your vehicle. \nThe stop button in the center can be used to immediately stop the vehicle. \nThe slider on the right can be used to control the speed of the vehicle. \nWe hope that you have a lot of fun in the Esstelleague!</string>
     <string name="darkthemetitle">Dark theme</string>
     <string name="hintstitle">Hints</string>
     <string name="soundtitle">Sound</string>
