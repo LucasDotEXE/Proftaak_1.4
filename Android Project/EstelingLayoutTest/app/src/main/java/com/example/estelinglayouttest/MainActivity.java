@@ -11,7 +11,13 @@ import android.view.WindowManager;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Fragment currentFragment = new HomeFragment();
+    public static Fragment currentFragment = new HomeFragment();
+    public static Fragment homeFragment = new HomeFragment();
+    public static Fragment mapFragment = new MapFragment();
+    public static Fragment playFragment = new PlayFragment();
+    public static Fragment settingsFragment = new SettingsFragment();
+    public static boolean hints = true;
+    public static boolean sound = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,16 +43,16 @@ public class MainActivity extends AppCompatActivity {
 
                     switch (item.getItemId()) {
                         case R.id.nav_home:
-                        selectedFragment = new HomeFragment();
+                        selectedFragment = homeFragment;
                             break;
                             case R.id.nav_map:
-                        selectedFragment = new MapFragment();
+                        selectedFragment = mapFragment;
                             break;
                             case R.id.nav_play:
-                        selectedFragment = new PlayFragment();
+                        selectedFragment = playFragment;
                             break;
                             case R.id.nav_settings:
-                        selectedFragment = new SettingsFragment();
+                        selectedFragment = settingsFragment;
                             break;
                     }
                     currentFragment = selectedFragment;

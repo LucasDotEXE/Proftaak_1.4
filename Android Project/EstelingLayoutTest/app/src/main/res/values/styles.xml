@@ -6,10 +6,20 @@
         <item name="colorPrimary">#c42f2b</item>
         <item name="colorPrimaryDark">#c42f2b</item>
         <item name="colorAccent">#c42f2b</item>
+        <item name="backgroundcolor">#ffffff</item>
+        <item name="textcolor">#808080</item>
+        <item name="bottomcolor">#D6D7D7</item>
 
     </style>
 
     <style name= "AppThemeDark" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="colorPrimary">#c42f2b</item>
+        <item name="colorPrimaryDark">#c42f2b</item>
+        <item name="colorAccent">#c42f2b</item>
+        <item name="backgroundcolor">#808080</item>
+        <item name="textcolor">#ffffff</item>
+        <item name="bottomcolor">#404040</item>
 
     </style>
 
