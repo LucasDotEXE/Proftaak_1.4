@@ -1,10 +1,12 @@
 package com.example.estelinglayouttest;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +19,7 @@ import android.widget.Switch;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class SettingsFragment extends Fragment {
 
@@ -64,6 +67,7 @@ public class SettingsFragment extends Fragment {
                     getActivity().setTheme(R.style.AppTheme);
                     darkThemeBool = false;
                 }
+                refresh();
             }
         });
 
@@ -87,11 +91,17 @@ public class SettingsFragment extends Fragment {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String item = parent.getItemAtPosition(position).toString();
                 if (item.equals("Nederlands")) {
-
+                    Configuration configuration = new Configuration();
+                    configuration.locale = Locale.US;
+                    getContext().getResources().updateConfiguration(configuration, getContext().getResources().getDisplayMetrics());
                 } else if (item.equals("English")) {
-
+                    Configuration configuration = new Configuration();
+                    configuration.locale = Locale.UK;
+                    getContext().getResources().updateConfiguration(configuration, getContext().getResources().getDisplayMetrics());
                 } else if (item.equals("Deutsch")) {
-
+                    Configuration configuration = new Configuration();
+                    configuration.locale = Locale.GERMANY;
+                    getContext().getResources().updateConfiguration(configuration, getContext().getResources().getDisplayMetrics());
                 }
             }
 
@@ -109,5 +119,8 @@ public class SettingsFragment extends Fragment {
         this.languages.setAdapter(adapter);
 
         return view;
+    }
+
+    public void refresh() {
     }
 }
