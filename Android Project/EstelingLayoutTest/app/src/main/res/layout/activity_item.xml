@@ -22,6 +22,7 @@
         android:layout_height="34dp"
         android:layout_marginStart="8dp"
         android:text="Naam"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/gwb_avatar"
         app:layout_constraintEnd_toEndOf="@+id/gwb_avatar"
         app:layout_constraintStart_toStartOf="@+id/gwb_avatar"
