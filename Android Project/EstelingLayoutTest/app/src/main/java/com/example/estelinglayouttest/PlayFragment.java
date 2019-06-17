@@ -27,7 +27,7 @@ public class PlayFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         // Init dataset
-        this.dataset = ProjectFactory.getInstance().getDataset();
+        this.dataset = AtractieFactory.getInstance().getDataset();
 
         recyclerView =  view.findViewById(R.id.attractieRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));

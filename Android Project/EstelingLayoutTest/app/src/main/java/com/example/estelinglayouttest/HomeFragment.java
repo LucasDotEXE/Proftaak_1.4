@@ -20,11 +20,12 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_home, container, false);
-        Button button = view.findViewById(R.id.temp_button);
+        Button button = view.findViewById(R.id.Play_button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(v.getContext(), Controls.class));
+                MainActivity.currentFragment = MainActivity.playFragment;
+                MainActivity.mainActivity.reload();
             }
         });
         return view;
