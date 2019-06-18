@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="manualtitle">Handbuch</string>
+    <string name="manualcontent">Es gibt fünf Knöpfe und ein slider womit Sie die Wagen kann fahren. \nVier Knöpfe mit Pfeile benutzen Sie um die Richtung von Ihrer Fahrzeugzu bestimmen. \nDer Knopf im Mitten können Sie nutzen um die Wagen direkt zu halten. \nDie Slider rechts können Sie nutzen um der Geschwindigkeit vom Fahrzeug festzustellen. \nWir höffen dass Sie viel Spaß haben im Esstelleague!</string>
+    <string name="darkthemetitle">Dunkles Thema</string>
+    <string name="hintstitle">Hinweise</string>
+    <string name="soundtitle">Klingen</string>
+    <string name="languagetitle">Sprache</string>
+    <string name="aboutustitle">Über uns</string>
+</resources>

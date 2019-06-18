@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <Switch
+        android:id="@+id/darkThemeSwitchI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/darkThemeTitleTextI"
+        app:layout_constraintStart_toEndOf="@+id/darkThemeTitleTextI"
+        app:layout_constraintTop_toTopOf="@+id/darkThemeTitleTextI" />
+
+    <TextView
+        android:id="@+id/hintsTitleTextI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/hintstitle"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/darkThemeTitleTextI"
+        app:layout_constraintTop_toBottomOf="@+id/darkThemeTitleTextI" />
+
+    <Switch
+        android:id="@+id/hintsSwitchI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        app:layout_constraintBottom_toBottomOf="@+id/hintsTitleTextI"
+        app:layout_constraintEnd_toEndOf="@+id/darkThemeSwitchI"
+        app:layout_constraintStart_toStartOf="@+id/darkThemeSwitchI"
+        app:layout_constraintTop_toTopOf="@+id/hintsTitleTextI" />
+
+    <TextView
+        android:id="@+id/darkThemeTitleTextI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/darkthemetitle"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/aboutUsButtonI"
+        android:layout_width="91dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/aboutustitle"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/soundTitleTextI" />
+
+    <Switch
+        android:id="@+id/soundSwitchI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        app:layout_constraintBottom_toBottomOf="@+id/soundTitleTextI"
+        app:layout_constraintEnd_toEndOf="@+id/hintsSwitchI"
+        app:layout_constraintStart_toStartOf="@+id/hintsSwitchI"
+        app:layout_constraintTop_toTopOf="@+id/soundTitleTextI" />
+
+    <TextView
+        android:id="@+id/soundTitleTextI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/soundtitle"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/hintsTitleTextI"
+        app:layout_constraintTop_toBottomOf="@+id/hintsTitleTextI" />
+</android.support.constraint.ConstraintLayout>

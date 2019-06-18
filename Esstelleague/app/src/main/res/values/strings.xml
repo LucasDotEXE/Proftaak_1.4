@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name" translatable="false">Essteling</string>
+    <string name="manualtitle">Handleiding</string>
+    <string name="manualcontent">Er zijn vijf knoppen en één slider waarmee u de wagen kan besturen.  De vier knoppen met pijlen gebruikt u om uw voertuig  te besturen.  De stop knop in het midden kan u gebruiken om de wagen onmiddelijk te laten stoppen.  De slider gebruikt u om de snelheid te bepalen van het voertuig.  Wij hopen dat u veel plezier heeft in de Esstelleague!</string>
+    <string name="darkthemetitle">Donker thema</string>
+    <string name="hintstitle">Hints</string>
+    <string name="soundtitle">Geluid</string>
+    <string name="languagetitle">Taal</string>
+    <string name="aboutustitle">Over ons</string>
+    <string name="huidige_wedstrijden" translatable="false">Huidige wedstrijden</string>
+    <string name="nieuws" translatable="false">Nieuws</string>
+    <string name="logo" translatable="false">logo</string>
+    <string name="logoround" translatable="false">logoround</string>
+    <string name="textview" translatable="false">TextView</string>
+    <string name="play" translatable="false">Play</string>
+    <string name="essteling_logo" translatable="false">Essteling_logo</string>
+    <string name="welkom_bij_de_esstelleague" translatable="false">welkom bij de Esseteleague</string>
+    <string name="esstelleague_uitnodiging_bericht" translatable="false">welkom bij de Essteleague. ga ten strijde met uw favoriete sprookjes karakters en bepaal de uikomst van het verhaal. selecteer uw karakter en zorg ervoor dat het sprookje goed afloopt.</string>
+    <string name="neem_controle_over_1_van_onze_sprookjes_auto_s_en_bepaal_hoe_het_verhaal_zich_verder_verloop" translatable="false">neem controle over 1 van onze sprookjes auto\'s en bepaal hoe het verhaal zich verder verloop.</string>
+    <string name="todo" translatable="false">TODO</string>
+    <string name="neem_controle_over_1_van_onze_sprookjes_auto_s_en_bepaal_hoe_het_verhaal_zich_verder_afspeel_in_dit_interactieve_autospel" translatable="false">Neem controle over 1 van onze sprookjes auto’s en bepaal hoe het verhaal zich verder afspeel in dit interactieve autospel.</string>
+    <string name="rv_baron" translatable="false">Baron</string>
+    <string name="rv_bob" translatable="false">Bob</string>
+    <string name="rv_dezwevendebelg" translatable="false">De Zwevende Belg</string>
+    <string name="rv_droomvlucht" translatable="false">Droomvlucht</string>
+    <string name="rv_fatamorgana" translatable="false">Fata Morgana</string>
+    <string name="rv_festivaloveral" translatable="false">Festival Overal</string>
+    <string name="rv_johanendeeenhoorn" translatable="false">Johan en de Eenhoorn</string>
+    <string name="rv_monsieurcannibale" translatable="false">Monsieur Cannibale</string>
+    <string name="rv_python" translatable="false">Python</string>
+    <string name="rv_symbolica" translatable="false">Symbolica</string>
+    <string name="rv_vogelrok" translatable="false">Vogelrok</string>
+
+    <string name="aboutuscontent" translatable="false">Wij zijn een studententeam in dienst van de Essteling, gehuurd om voor de Essteling een applicatie te maken. \nDeze applicatie is de Esstelleague, gemaakt om de wachtrij toch net iets interessanter te maken. \n \nOns team bestaat uit: \nGroepsleider - Tom Kaasenbrood \nCode-beheerder - Lucas Prins \nSecretaris - Dustin Hendriks \nEvaluator - Daphne Boulhouwers \nPlanner - Pascal de Bruijn \n \n Wij hebben dit project gemaakt voor de opdracht: \'Maak een applicatie die mensen in de Essteling meer laat interacteren met elkaar en de omgeving\'. \nUiteindelijk hebben wij gekozen voor de Esstelleague omdat wij dit idee het interessantst vonden. \nWij konden met dit idee zowel veel aan de hardware als de software doen, hierdoor hebben we erg veel geleerd gedurende het project. \n \nWe hopen dat je de app goed vindt, feedback kan verstuurd worden naar: \'support.esstelleague@essteling.nl\'</string>
+</resources>
