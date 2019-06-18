@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:mContext=".Play2Activity">
+
+    <ImageView
+        android:id="@+id/rv_item"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/EsstelingRed"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="3f"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mName"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:text="Naam"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rv_item"
+        app:layout_constraintEnd_toEndOf="@+id/rv_item"
+        app:layout_constraintStart_toStartOf="@+id/rv_item"
+        app:layout_constraintTop_toTopOf="@+id/rv_item" />
+
+    <ImageView
+        android:id="@+id/rv_redBar"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_item"
+        app:srcCompat="@color/EsstelingRed" />
+
+</android.support.constraint.ConstraintLayout>
