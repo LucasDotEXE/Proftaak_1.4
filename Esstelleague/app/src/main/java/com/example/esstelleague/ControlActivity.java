@@ -6,7 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.SeekBar;
+import android.widget.Toast;
 
 import com.example.esstelleague.mqtt.MQTT;
 
@@ -53,6 +55,9 @@ public class ControlActivity extends AppCompatActivity {
         ImageButton stop = this.findViewById(R.id.stop);
         ImageButton left = this.findViewById(R.id.left);
         ImageButton right = this.findViewById(R.id.right);
+
+        ImageView info = findViewById(R.id.Info);
+        info.setOnClickListener(v -> Toast.makeText(getApplicationContext(), "The slider controls speed", Toast.LENGTH_LONG).show());
 
         forward.setOnClickListener(getClickListener(Direction.FORWARD, R.id.forward));
         back.setOnClickListener(getClickListener(Direction.BACKWARDS, R.id.back));
@@ -108,7 +113,7 @@ public class ControlActivity extends AppCompatActivity {
                 if (view == car) {
                     view.setBackgroundColor(getColor(R.color.EsstelingRed));
                 } else {
-                    view.setBackgroundColor(Color.WHITE);
+                    view.setBackgroundColor(Color.TRANSPARENT);
                 }
             }
         };
