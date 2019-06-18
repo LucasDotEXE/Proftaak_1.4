@@ -20,6 +20,9 @@ public class SettingsFragment extends Fragment {
     private Switch mSound;
     private Button mAboutUs;
 
+
+    //Author: Tom
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -40,15 +43,14 @@ public class SettingsFragment extends Fragment {
         });
         this.mDarkTheme = view.findViewById(R.id.darkThemeSwitchI);
         this.mDarkTheme.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            //functionality for darktheme, themes are set here, boolean in MainActivity is used to decide themes elsewhere using intents
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     getActivity().setTheme(R.style.AppThemeDark);
-                    getActivity().getApplication().setTheme(R.style.AppThemeDark);
                     MainActivity.DARKTHEME = true;
                 } else {
                     getActivity().setTheme(R.style.AppTheme);
-                    getActivity().getApplication().setTheme(R.style.AppTheme);
                     MainActivity.DARKTHEME = false;
                 }
                 refresh();
@@ -59,6 +61,7 @@ public class SettingsFragment extends Fragment {
         this.mAboutUs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Intent is used to send along theme
                 Intent intent = new Intent(v.getContext(), AboutUsActivity.class);
                 if (MainActivity.DARKTHEME) {
                     intent.putExtra("theme", "dark");
@@ -72,8 +75,8 @@ public class SettingsFragment extends Fragment {
         return view;
     }
 
+    //method for forcing a refresh of the fragment, used to activate darktheme
     public void refresh() {
-//        MainActivity.MAIN_ACTIVITY.reload();
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);

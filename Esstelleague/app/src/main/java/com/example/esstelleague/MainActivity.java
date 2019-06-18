@@ -11,8 +11,11 @@ import android.view.WindowManager;
 
 public class MainActivity extends AppCompatActivity {
 
+    //authors: Tom, Lucas
+
     public static MainActivity MAIN_ACTIVITY;
 
+    //Tom: Fragments are static so they can be used in other classes
     public static Fragment CURRENT_FRAGMENT = new HomeFragment();
     public static Fragment HOME_FRAGMENT = new HomeFragment();
     public static Fragment MAP_FRAGMENT = new MapFragment();
@@ -44,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 CURRENT_FRAGMENT).commit();
     }
 
+    //Tom: no new fragments are made after the initial fragments to allow proper usage of themes
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
