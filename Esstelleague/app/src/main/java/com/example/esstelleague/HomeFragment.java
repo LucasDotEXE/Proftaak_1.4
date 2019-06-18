@@ -22,7 +22,8 @@ public class HomeFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(v.getContext(), ControlActivity.class));
+                MainActivity.CURRENT_FRAGMENT = MainActivity.PLAY_FRAGMENT;
+                MainActivity.MAIN_ACTIVITY.reload();
             }
         });
         return view;

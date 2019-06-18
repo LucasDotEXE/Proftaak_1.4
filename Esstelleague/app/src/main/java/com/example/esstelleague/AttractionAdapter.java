@@ -1,6 +1,7 @@
 package com.example.esstelleague;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -34,7 +35,7 @@ public class AttractionAdapter extends RecyclerView.Adapter<AttractionAdapter.At
 
     @Override
     public void onBindViewHolder(@NonNull AttractieViewHolder holder, int position) {
-        Log.d(TAG, "onBindViewHolder: ISNULL? "+(holder.mAttractie ==null));
+        Log.d(TAG, "onBindViewHolder: ISNULL? " + (holder.mAttractie == null));
         int resid = holder.itemView.getResources().getIdentifier(mDataset.get(holder.getAdapterPosition()).getmImageUrl(), "drawable", holder.itemView.getContext().getPackageName());
         Attraction attractie = mDataset.get(position);
         holder.mAttractie.setText(attractie.getmName());
@@ -53,8 +54,22 @@ public class AttractionAdapter extends RecyclerView.Adapter<AttractionAdapter.At
 
         public AttractieViewHolder(View itemView) {
             super(itemView);
-            mAttractie =  itemView.findViewById(R.id.mName);
-            mImageView =  itemView.findViewById(R.id.rv_item);
+            mAttractie = itemView.findViewById(R.id.mName);
+            mImageView = itemView.findViewById(R.id.rv_item);
+
+            itemView.setOnClickListener(view -> {
+                Intent intent = new Intent(
+                        view.getContext(),
+                        DetailedAtractieActivity.class);
+                Log.i("POSITION", "" + AttractieViewHolder.super.getAdapterPosition());
+
+                // Get GWB object waarop is geclicked
+                Attraction gwb = mDataset.get(AttractieViewHolder.super.getAdapterPosition());
+                intent.putExtra("GWB_OBJECT", gwb);
+
+                // Start de nieuwe activity
+                view.getContext().startActivity(intent);
+            });
         }
     }
 }

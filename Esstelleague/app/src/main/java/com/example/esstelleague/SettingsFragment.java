@@ -72,6 +72,7 @@ public class SettingsFragment extends Fragment {
     }
 
     public void refresh() {
+//        MainActivity.MAIN_ACTIVITY.reload();
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
