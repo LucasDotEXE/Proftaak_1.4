@@ -13,6 +13,13 @@ public class DetailedAtractieActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        String theme = getIntent().getStringExtra("theme");
+        if (theme.equals("dark")) {
+            this.setTheme(R.style.AppThemeDark);
+        } else {
+            this.setTheme(R.style.AppTheme);
+        }
         setContentView(R.layout.activity_detailed_atractie);
 
         Attraction gwb = (Attraction) getIntent().getSerializableExtra("GWB_OBJECT");
@@ -29,7 +36,13 @@ public class DetailedAtractieActivity extends AppCompatActivity {
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(v.getContext(), ControlActivity.class));
+                Intent intent = new Intent(v.getContext(), ControlActivity.class);
+                if (MainActivity.DARKTHEME) {
+                    intent.putExtra("theme", "dark");
+                } else {
+                    intent.putExtra("theme", "light");
+                }
+                startActivity(intent);
             }
         });
 

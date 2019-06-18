@@ -19,60 +19,48 @@ public class SettingsFragment extends Fragment {
     private Switch mHints;
     private Switch mSound;
     private Button mAboutUs;
-    private boolean mDarkThemeBool = false;
+
+
+    //Author: Tom
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_settings, container, false);
         this.mSound = view.findViewById(R.id.soundSwitchI);
-        this.mSound.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                MainActivity.SOUND =isChecked;
-            }
-        });
+        this.mSound.setOnCheckedChangeListener((buttonView, isChecked) -> MainActivity.SOUND =isChecked);
         this.mHints = view.findViewById(R.id.hintsSwitchI);
-        this.mHints.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                MainActivity.HINTS =isChecked;
-            }
-        });
+        this.mHints.setOnCheckedChangeListener((buttonView, isChecked) -> MainActivity.HINTS =isChecked);
         this.mDarkTheme = view.findViewById(R.id.darkThemeSwitchI);
-        this.mDarkTheme.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    getActivity().setTheme(R.style.AppThemeDark);
-                    mDarkThemeBool = true;
-                } else {
-                    getActivity().setTheme(R.style.AppTheme);
-                    mDarkThemeBool = false;
-                }
-                refresh();
+        this.mDarkTheme.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            //functionality for darktheme, themes are set here, boolean in MainActivity is used to decide themes elsewhere using intents
+            if (isChecked) {
+                getActivity().setTheme(R.style.AppThemeDark);
+                MainActivity.DARKTHEME = true;
+            } else {
+                getActivity().setTheme(R.style.AppTheme);
+                MainActivity.DARKTHEME = false;
             }
+            refresh();
         });
 
         this.mAboutUs = view.findViewById(R.id.aboutUsButtonI);
-        this.mAboutUs.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), AboutUsActivity.class);
-                if (mDarkThemeBool) {
-                    intent.putExtra("theme", "dark");
-                } else {
-                    intent.putExtra("theme", "light");
-                }
-                v.getContext().startActivity(intent);
+        this.mAboutUs.setOnClickListener(v -> {
+            //Intent is used to send along theme
+            Intent intent = new Intent(v.getContext(), AboutUsActivity.class);
+            if (MainActivity.DARKTHEME) {
+                intent.putExtra("theme", "dark");
+            } else {
+                intent.putExtra("theme", "light");
             }
+            v.getContext().startActivity(intent);
         });
 
         return view;
     }
 
+    //method for forcing a refresh of the fragment, used to activate darktheme
     public void refresh() {
-//        MainActivity.MAIN_ACTIVITY.reload();
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
