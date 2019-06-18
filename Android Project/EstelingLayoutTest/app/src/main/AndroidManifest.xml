@@ -14,15 +14,18 @@
         android:roundIcon="@mipmap/essteling_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".DetailedAtractieActivity"></activity>
 
         <service android:name="org.eclipse.paho.android.service.MqttService" />
-        <service android:name=".MQTT_Connection.MqttMessageService" android:enabled="true" android:exported="false" />
+        <service
+            android:name=".MQTT_Connection.MqttMessageService"
+            android:enabled="true"
+            android:exported="false" />
 
-
-        <activity android:name=".Controls"></activity>
-        <activity android:name=".MQTT_Connection.MainConnectionActivity"></activity>
-        <activity android:name=".AboutUsActivity"></activity>
-        <activity android:name=".Play2Activity"></activity>
+        <activity android:name=".Controls" />
+        <activity android:name=".MQTT_Connection.MainConnectionActivity" />
+        <activity android:name=".AboutUsActivity" />
+        <activity android:name=".Play2Activity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

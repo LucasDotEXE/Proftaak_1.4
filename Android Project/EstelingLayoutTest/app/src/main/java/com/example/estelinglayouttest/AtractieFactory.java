@@ -2,19 +2,19 @@ package com.example.estelinglayouttest;
 
 import java.util.ArrayList;
 
-public class ProjectFactory {
+public class AtractieFactory {
 
     private ArrayList<Attractie> dataset = new ArrayList<>();
-    private static ProjectFactory instance = null;
+    private static AtractieFactory instance = null;
 
-    public static ProjectFactory getInstance() {
+    public static AtractieFactory getInstance() {
         if( instance == null ) {
-            instance = new ProjectFactory();
+            instance = new AtractieFactory();
         }
         return instance;
     }
 
-    private ProjectFactory() {
+    private AtractieFactory() {
         constructDataSet();
     }
 
