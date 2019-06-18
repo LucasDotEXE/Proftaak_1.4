@@ -21,6 +21,13 @@ public class ControlActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        String theme = this.getIntent().getStringExtra("theme");
+
+        if (theme.equals("dark")) {
+            this.setTheme(R.style.AppThemeDark);
+        } else {
+            this.setTheme(R.style.AppTheme);
+        }
         setContentView(R.layout.activity_controlscreen);
         setSeekBar();
         mMQTT_Client=new MQTT(getApplicationContext());

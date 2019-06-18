@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     public static Fragment SETTINGS_FRAGMENT = new SettingsFragment();
     public static boolean HINTS = true;
     public static boolean SOUND = true;
+    public static boolean DARKTHEME = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

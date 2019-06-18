@@ -66,6 +66,11 @@ public class AttractionAdapter extends RecyclerView.Adapter<AttractionAdapter.At
                 // Get GWB object waarop is geclicked
                 Attraction gwb = mDataset.get(AttractieViewHolder.super.getAdapterPosition());
                 intent.putExtra("GWB_OBJECT", gwb);
+                if (MainActivity.DARKTHEME) {
+                    intent.putExtra("theme", "dark");
+                } else {
+                    intent.putExtra("theme", "light");
+                }
 
                 // Start de nieuwe activity
                 view.getContext().startActivity(intent);

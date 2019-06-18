@@ -19,7 +19,6 @@ public class SettingsFragment extends Fragment {
     private Switch mHints;
     private Switch mSound;
     private Button mAboutUs;
-    private boolean mDarkThemeBool = false;
 
     @Nullable
     @Override
@@ -45,10 +44,12 @@ public class SettingsFragment extends Fragment {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     getActivity().setTheme(R.style.AppThemeDark);
-                    mDarkThemeBool = true;
+                    getActivity().getApplication().setTheme(R.style.AppThemeDark);
+                    MainActivity.DARKTHEME = true;
                 } else {
                     getActivity().setTheme(R.style.AppTheme);
-                    mDarkThemeBool = false;
+                    getActivity().getApplication().setTheme(R.style.AppTheme);
+                    MainActivity.DARKTHEME = false;
                 }
                 refresh();
             }
@@ -59,7 +60,7 @@ public class SettingsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), AboutUsActivity.class);
-                if (mDarkThemeBool) {
+                if (MainActivity.DARKTHEME) {
                     intent.putExtra("theme", "dark");
                 } else {
                     intent.putExtra("theme", "light");
