@@ -58,17 +58,21 @@ public class AttractionAdapter extends RecyclerView.Adapter<AttractionAdapter.At
             mImageView = itemView.findViewById(R.id.rv_item);
 
             itemView.setOnClickListener(view -> {
-                Intent intent = new Intent(
-                        view.getContext(),
-                        DetailedAtractieActivity.class);
-                Log.i("POSITION", "" + AttractieViewHolder.super.getAdapterPosition());
+                itemView.startAnimation(Animation.getFadeOut(mContext));
+                itemView.postOnAnimationDelayed(() -> {
+                    Intent intent = new Intent(
+                            view.getContext(),
+                            DetailedAtractieActivity.class);
+                    Log.i("POSITION", "" + AttractieViewHolder.super.getAdapterPosition());
 
-                // Get GWB object waarop is geclicked
-                Attraction gwb = mDataset.get(AttractieViewHolder.super.getAdapterPosition());
-                intent.putExtra("GWB_OBJECT", gwb);
+                    // Get GWB object waarop is geclicked
+                    Attraction gwb = mDataset.get(AttractieViewHolder.super.getAdapterPosition());
+                    intent.putExtra("GWB_OBJECT", gwb);
 
-                // Start de nieuwe activity
-                view.getContext().startActivity(intent);
+
+                    // Start de nieuwe activity
+                    view.getContext().startActivity(intent);
+                }, 1000);
             });
         }
     }

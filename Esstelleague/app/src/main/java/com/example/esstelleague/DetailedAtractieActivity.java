@@ -25,7 +25,7 @@ public class DetailedAtractieActivity extends AppCompatActivity {
 
         Button play = findViewById(R.id.atractie_play);
 
-        play.setText("Play at: \n" + gwb.getmName());
+        play.setText("Play at: " + gwb.getmName());
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

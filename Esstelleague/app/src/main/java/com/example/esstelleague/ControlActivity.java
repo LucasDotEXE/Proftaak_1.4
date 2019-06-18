@@ -1,5 +1,6 @@
 package com.example.esstelleague;
 
+import android.graphics.Color;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +9,8 @@ import android.widget.ImageButton;
 import android.widget.SeekBar;
 
 import com.example.esstelleague.mqtt.MQTT;
+
+import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -18,6 +21,7 @@ public class ControlActivity extends AppCompatActivity {
     private int mCarID = 1;
     private Direction mLastDir =Direction.STOP;
 
+    private ArrayList<CircleImageView> cars;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,53 +58,81 @@ public class ControlActivity extends AppCompatActivity {
         CircleImageView civ_car3 = this.findViewById(R.id.civ_car3);
         CircleImageView civ_car4 = this.findViewById(R.id.civ_car4);
 
+        this.cars = new ArrayList<>();
+        this.cars.add(civ_car1);
+        this.cars.add(civ_car2);
+        this.cars.add(civ_car3);
+        this.cars.add(civ_car4);
+
+
         civ_car1.setOnClickListener(event -> {
-            mCarID = 1;
-            civ_car1.startAnimation(Animation.getRotateAnimation(getApplicationContext()));
+            if (mCarID != 1) {
+                mCarID = 1;
+                civ_car1.startAnimation(Animation.getRotateAnimation(getApplicationContext()));
+                civ_car1.postOnAnimationDelayed(setSelectedbackground(civ_car1), 750);
+            }
         });
         civ_car2.setOnClickListener(event -> {
-            mCarID = 2;
-            civ_car2.startAnimation(Animation.getRotateAnimation(getApplicationContext()));
+            if (mCarID != 2) {
+                mCarID = 2;
+                civ_car2.startAnimation(Animation.getRotateAnimation(getApplicationContext()));
+                civ_car2.postOnAnimationDelayed(setSelectedbackground(civ_car2), 750);
+            }
         });
         civ_car3.setOnClickListener(event -> {
-            mCarID = 3;
-            civ_car3.startAnimation(Animation.getRotateAnimation(getApplicationContext()));
+            if (mCarID != 3) {
+                mCarID = 3;
+                civ_car3.startAnimation(Animation.getRotateAnimation(getApplicationContext()));
+                civ_car3.postOnAnimationDelayed(setSelectedbackground(civ_car3), 750);
+            }
         });
         civ_car4.setOnClickListener(event -> {
-            mCarID = 4;
-            civ_car4.startAnimation(Animation.getRotateAnimation(getApplicationContext()));
+            if (mCarID != 4) {
+                mCarID = 4;
+                civ_car4.startAnimation(Animation.getRotateAnimation(getApplicationContext()));
+                civ_car4.postOnAnimationDelayed(setSelectedbackground(civ_car4), 750);
+            }
         });
+    }
+
+    private Runnable setSelectedbackground(CircleImageView car) {
+        return () -> {
+            for (CircleImageView view : this.cars) {
+                if (view == car) {
+                    view.setBackgroundColor(getColor(R.color.EsstelingRed));
+                } else {
+                    view.setBackgroundColor(Color.WHITE);
+                }
+            }
+        };
     }
 
 
 
 
     private View.OnClickListener getClickListener(final Direction action, int id) {
-        return new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                SeekBar mSB_Speed = findViewById(R.id.seekBarSlider);
-                mSB_Speed.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-                    @Override
-                    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                        action(mLastDir, mSB_Speed.getProgress());
-                    }
-
-                    @Override
-                    public void onStartTrackingTouch(SeekBar seekBar) {
-                    }
-
-                    @Override
-                    public void onStopTrackingTouch(SeekBar seekBar) {
-
-                    }
-                });
-                if (findViewById(id) instanceof ImageButton) {
-                    ImageButton button = (ImageButton)findViewById(id);
-                    button.startAnimation(Animation.getFeedbackAnimation(getApplicationContext()));
+        return v -> {
+            SeekBar mSB_Speed = findViewById(R.id.seekBarSlider);
+            mSB_Speed.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                @Override
+                public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                    action(mLastDir, mSB_Speed.getProgress());
                 }
-                action(action, mSB_Speed.getProgress());
+
+                @Override
+                public void onStartTrackingTouch(SeekBar seekBar) {
+                }
+
+                @Override
+                public void onStopTrackingTouch(SeekBar seekBar) {
+
+                }
+            });
+            if (findViewById(id) instanceof ImageButton) {
+                ImageButton button = (ImageButton)findViewById(id);
+                button.startAnimation(Animation.getFeedbackAnimation(getApplicationContext()));
             }
+            action(action, mSB_Speed.getProgress());
         };
     }
 

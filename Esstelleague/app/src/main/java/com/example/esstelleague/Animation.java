@@ -11,4 +11,8 @@ public class Animation {
     public static android.view.animation.Animation getFeedbackAnimation(Context appContext) {
         return AnimationUtils.loadAnimation(appContext, R.anim.btn_feedback);
     }
+
+    public static android.view.animation.Animation getFadeOut(Context app) {
+        return AnimationUtils.loadAnimation(app, R.anim.fade_out);
+    }
 }
