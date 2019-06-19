@@ -8,32 +8,29 @@
     <string name="languagetitle">Taal</string>
     <string name="aboutustitle">Over ons</string>
     <string name="huidige_wedstrijden" translatable="false">Huidige wedstrijden</string>
-    <string name="nieuws" translatable="false">Nieuws</string>
+    <string name="nieuws">Nieuws</string>
     <string name="logo" translatable="false">logo</string>
     <string name="logoround" translatable="false">logoround</string>
-    <string name="textview" translatable="false">TextView</string>
-    <string name="play" translatable="false">Play</string>
+    <string name="play">Spelen</string>
     <string name="essteling_logo" translatable="false">Essteling_logo</string>
-    <string name="welkom_bij_de_esstelleague" translatable="false">welkom bij de Esseteleague</string>
     <string name="esstelleague_uitnodiging_bericht" translatable="false">welkom bij de Essteleague. ga ten strijde met uw favoriete sprookjes karakters en bepaal de uikomst van het verhaal. selecteer uw karakter en zorg ervoor dat het sprookje goed afloopt.</string>
-    <string name="neem_controle_over_1_van_onze_sprookjes_auto_s_en_bepaal_hoe_het_verhaal_zich_verder_verloop" translatable="false">neem controle over 1 van onze sprookjes auto\'s en bepaal hoe het verhaal zich verder verloop.</string>
-    <string name="neem_controle_over_1_van_onze_sprookjes_auto_s_en_bepaal_hoe_het_verhaal_zich_verder_afspeel_in_dit_interactieve_autospel" translatable="false">Neem controle over 1 van onze sprookjes auto’s en bepaal hoe het verhaal zich verder afspeelt in dit interactieve autospel.</string>
-    <string name="rv_baron" translatable="false">Baron</string>
-    <string name="rv_bob" translatable="false">Bob</string>
-    <string name="rv_dezwevendebelg" translatable="false">De Zwevende Belg</string>
-    <string name="rv_droomvlucht" translatable="false">Droomvlucht</string>
-    <string name="rv_fatamorgana" translatable="false">Fata Morgana</string>
-    <string name="rv_festivaloveral" translatable="false">Festival Overal</string>
-    <string name="rv_johanendeeenhoorn" translatable="false">Johan en de Eenhoorn</string>
-    <string name="rv_monsieurcannibale" translatable="false">Monsieur Cannibale</string>
-    <string name="rv_python" translatable="false">Python</string>
-    <string name="rv_symbolica" translatable="false">Symbolica</string>
-    <string name="rv_vogelrok" translatable="false">Vogelrok</string>
-    <string name="aboutuscontent" translatable="false">Wij zijn een studententeam in dienst van de Essteling, gehuurd om voor de Essteling een applicatie te maken. \nDeze applicatie is de Esstelleague, gemaakt om de wachtrij toch net iets interessanter te maken. \n \nOns team bestaat uit: \nGroepsleider - Tom Kaasenbrood \nCode-beheerder - Lucas Prins \nSecretaris - Dustin Hendriks \nEvaluator - Daphne Boulhouwers \nPlanner - Pascal de Bruijn \n \n Wij hebben dit project gemaakt voor de opdracht: \'Maak een applicatie die mensen in de Essteling meer laat interacteren met elkaar en de omgeving\'. \nUiteindelijk hebben wij gekozen voor de Esstelleague omdat wij dit idee het interessantst vonden. \nWij konden met dit idee zowel veel aan de hardware als de software doen, hierdoor hebben we erg veel geleerd gedurende het project. \n \nWe hopen dat je de app goed vindt, feedback kan verstuurd worden naar: \'support.esstelleague@essteling.nl\'</string>
+    <string name="neem_controle_over_1_van_onze_sprookjes_auto_s_en_bepaal_hoe_het_verhaal_zich_verder_afspeel_in_dit_interactieve_autospel">Neem controle over 1 van onze sprookjes auto’s en bepaal hoe het verhaal zich verder afspeelt in dit interactieve autospel.</string>
+    <string name="rv_baron">Om de mijn te betreden laat Baron 1898 je 37,5 meter omlaag storten! Snel, probeer het goud in de ondergrondse gang te bemachtigen voordat de Witte Wieven jouw kans op rijkdom saboteren tijdens deze dive coaster rit.</string>
+    <string name="rv_dezwevendebelg">Ondanks slechte weersomstandigheden voer kapitein Seppe van der Decken uit met zijn schip De Zwevende Belg, op zoek naar rijkdom. Zijn hebzucht was zo groot dat hij zijn bemanning beval op eerste Paasdag uit te varen, ook al was dat verboden. Sindsdien is eenieder aan boord gedoemd voor eeuwig te blijven varen over de zeven wereldzeeën. Tot op de dag van vandaag wordt het schip met zijn felrode zeilen waar dan ook ter wereld gezien… Men noemt het nu De Zwevende Belg!</string>
+    <string name="rv_droomvlucht">In deze betoverende wereld komen eenhoorns en bosdieren tot leven. En wanneer de nacht valt, zweven de steden gewichtloos door de duisternis. Tot het daglicht terugkeert en iedereen in het betoverende bos weer gelukkig ontwaakt in deze indoor attractie Droomvlucht.</string>
+    <string name="rv_fatamorgana">"Diep in het Oosterse paleis ligt een schitterende schat verborgen. En terwijl de sultan zich omringt met pracht en praal, vullen de duistere gevangenissen zich met criminelen en ratten. Breng eens wat tijd op het water door en aanschouw allerlei Oosterse taferelen. Een boot voert je door wijken vol armoede maar ook rijkdom. En een reus beschermt het meest waardevolle bezit van de sultan: zijn edelstenen, zilveren kandelaren en goudstukken. "</string>
+    <string name="rv_festivaloveral">Deel vreugde en geluk met elkaar en ontmoet vrolijke mensen. Jokie en Jet nemen je mee op reis naar verschillende landen! Maak kennis met diverse culturen en feest mee met alle rode neuzen ter wereld. Ontdek de verschillen en overeenkomsten in Festival Overal. </string>
+    <string name="rv_johanendeeenhoorn">Versla de eenhoorn die het koninkrijk teistert. Alle krijgers worden uitgedaagd één van de banen te kiezen en met ‘Water’ of ‘Vuur’ het beest te kloppen. Degene die hierin het snelst slaagt, krijgt alle eer na een rit in deze houten racerachtbaan.</string>
+    <string name="rv_monsieurcannibale">Op het eiland van Monsieur Cannibale draaien grote kookketels continu rond boven een knapperend vuur. Een ieder die voet aan land zet, mag plaatsnemen in dit duizelingwekkend avontuur totdat ze de kannibaal om genade smeekt. Je bent met de hele familie uitgenodigd om plaats te nemen in Monsieur Cannibale’s kookpotten. Ook als het regent zal het vuur van deze overdekte attractie wakkeren.</string>
+    <string name="rv_python">ontsnap aan de draaiende wurggreep van de Python die in alle rust op je wacht. Overleef de kronkelende bewegingen op grote hoogte in deze stalen achtbaan met dubbele looping en kurkentrekker.</string>
+    <string name="rv_symbolica">Beleef overdekte familie-attractie Symbolica, een betoverend paleis waar de fantasie tot leven komt. Ga samen op audiëntie bij de koning. Tovernar Pardoes zorgt ervoor dat élk bezoek verrassend en betoverend is. Dwaal af in de geheime gangen en magische vertrekken en val van de ene verbazing in de andere.</string>
+    <string name="rv_vogelrok">Vogel Rok neemt je mee! In zijn klauwen beleef je een huiveringwekkende vlucht in het donker. Langs slangen door de duisternis totdat de enorme roofvogel met de kracht van wel honderd leeuwen zijn nest bereikt heeft. Beleef het avontuur net als Sinbad de Zeeman.</string>
+    <string name="aboutuscontent">Wij zijn een studententeam in dienst van de Essteling, gehuurd om voor de Essteling een applicatie te maken.  Deze applicatie is de Esstelleague, gemaakt om de wachtrij toch net iets interessanter te maken. \nOns team bestaat uit:  \nGroepsleider - Tom Kaasenbrood  \nCode-beheerder - Lucas Prins  \nSecretaris - Dustin Hendriks  \nEvaluator - Daphne Boulhouwers  \nPlanner - Pascal de Bruijn  \nWij hebben dit project gemaakt voor de opdracht: \'Maak een applicatie die mensen in de Essteling meer laat interacteren met elkaar en de omgeving\'.  Uiteindelijk hebben wij gekozen voor de Esstelleague omdat wij dit idee het interessantst vonden.  Wij konden met dit idee zowel veel aan de hardware als de software doen, hierdoor hebben we erg veel geleerd gedurende het project.    We hopen dat je de app goed vindt, feedback kan verstuurd worden naar: \'support.esstelleague@essteling.nl\'</string>
     <string name="ca_fastHint">De schuifregelaar bepaalt de snelheid</string>
     <string name="daa_playat">Speel bij</string>
     <string name="ca_selectvehicle">Kies eerst je sprookjesmobiel</string>
     <string name="mqtt_connect">Verbinden...</string>
     <string name="mqtt_connect_suc">Verbonden</string>
     <string name="mqtt_connect_error">Verbinden mislukt</string>
+    <string name="rv_bob">Met 60 km/u naar beneden? Slinger door bochten en voel hoe de wind langs je gezicht glijdt. In de bobsleebaan bibber je zelfs zonder sneeuw. De Bob is een 524 m lange bobbaan en geschikt voor alle waaghalzen. In principe mag iedereen in deze attractie, maar kinderen onder de 1,20 m moeten begeleid worden door een volwassene en voor zwangere vrouwen is deze attractie niet geschikt. Voor mensen die alleen in deze attractie durven is er een speciale \'single rider wachtrij\'. De bobbaan is geopend als de weersomstandigheden het toelaten.</string>
 </resources>
