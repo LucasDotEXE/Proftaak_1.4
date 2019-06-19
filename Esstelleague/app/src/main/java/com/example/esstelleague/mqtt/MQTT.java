@@ -84,6 +84,7 @@ public class MQTT {
         MqttConnectOptions mqttConnectOptions = new MqttConnectOptions();
         mqttConnectOptions.setUserName(MQTT_SettingsEnvironment.sMQTT_username);
         mqttConnectOptions.setPassword(MQTT_SettingsEnvironment.sMQTT_passwd.toCharArray());
+        mqttConnectOptions.setConnectionTimeout(3);
         return mqttConnectOptions;
     }
 
