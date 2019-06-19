@@ -31,8 +31,11 @@ public class HomeFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MainActivity.CURRENT_FRAGMENT = MainActivity.PLAY_FRAGMENT;
-                MainActivity.MAIN_ACTIVITY.reload();
+                button.startAnimation(Animation.getFadeOut2(getContext()));
+                button.postOnAnimationDelayed(()-> {
+                    MainActivity.CURRENT_FRAGMENT = MainActivity.PLAY_FRAGMENT;
+                    MainActivity.MAIN_ACTIVITY.reload();
+                }, 600);
             }
         });
         return view;

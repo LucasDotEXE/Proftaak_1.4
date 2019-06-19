@@ -21,4 +21,8 @@ class Animation {
     static android.view.animation.Animation getFadeOut(Context app) {
         return AnimationUtils.loadAnimation(app, R.anim.fade_out);
     }
+
+    static android.view.animation.Animation getFadeOut2(Context app) {
+        return AnimationUtils.loadAnimation(app, R.anim.fade_out2);
+    }
 }

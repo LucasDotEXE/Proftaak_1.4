@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/backgroundcolor"
-    tools:context=".DetailedAttractionActivity">
+    tools:context=".DetailedAttractionActivity"
+    android:id="@+id/detailedLayout"
+    >
 
     <ImageView
         android:id="@+id/atractie_banner"
@@ -80,7 +82,7 @@
         app:layout_constraintTop_toBottomOf="@+id/atractie_naam">
 
         <TextView
-            android:id="@+id/atractie_detail"
+            android:id="@+id/attraction_detailed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"

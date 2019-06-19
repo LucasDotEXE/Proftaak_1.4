@@ -1,6 +1,7 @@
 package com.example.esstelleague;
 
 import android.content.Intent;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -36,7 +37,7 @@ public class DetailedAttractionActivity extends AppCompatActivity {
 
         ImageView banner = findViewById(R.id.atractie_banner);
         TextView naam = findViewById(R.id.atractie_naam);
-        TextView detail = findViewById(R.id.atractie_detail);
+        TextView detail = findViewById(R.id.attraction_detailed);
         naam.setText(attraction.getmName());
         detail.setText(getText(attraction.getmDetails()));
 
@@ -46,13 +47,16 @@ public class DetailedAttractionActivity extends AppCompatActivity {
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), ControlActivity.class);
-                if (MainActivity.DARKTHEME) {
-                    intent.putExtra("theme", "dark");
-                } else {
-                    intent.putExtra("theme", "light");
-                }
-                startActivity(intent);
+                play.startAnimation(Animation.getFadeOut2(getApplicationContext()));
+                play.postOnAnimationDelayed((()-> {
+                    Intent intent = new Intent(v.getContext(), ControlActivity.class);
+                    if (MainActivity.DARKTHEME) {
+                        intent.putExtra("theme", "dark");
+                    } else {
+                        intent.putExtra("theme", "light");
+                    }
+                    startActivity(intent);
+                }), 600);
             }
         });
 
