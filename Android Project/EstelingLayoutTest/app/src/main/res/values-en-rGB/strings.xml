@@ -7,4 +7,15 @@
     <string name="soundtitle">Sound</string>
     <string name="languagetitle">Language</string>
     <string name="aboutustitle">About us</string>
+    <string name="logo">logo</string>
+    <string name="logorond">logoround</string>
+    <string name="huidige_wedstrijden">Current  matches</string>
+    <string name="hoe_werkt_dit">how does this work</string>
+    <string name="button">Button</string>
+    <string name="welkom_bij_de_esseteleague">welcom to the Essteleague</string>
+    <string name="welkom_bij_de_essteleague_ga_ten_strijde_met_u_favoriete_sprookjes_characters_over_de_uikom_van_het_verhaal_selecteer_u_character_en_zorg_ervoor_dat_het_sprookje_goed_afloop">welcome to the Essteleague go to the battle with your favorite fairy tale characters and decide how the story is going to end select your chacarter and make sure the fairy tale ends well</string>
+    <string name="nieuws">News</string>
+    <string name="play">Play</string>
+    <string name="neem_controle_over_1_van_onze_sprookjes_auto_s_en_bepaal_hoe_het_verhaal_zich_verder_afspeel_in_dit_interactieve_autospel">Take control of 1 of our fairy tale cars and determine how the story continues in this interactive car game.</string>
+    <string name="neem_controle_over_1_van_onze_sprookjes_auto_s_en_bepaal_hoe_het_verhaal_zich_verder_verloop">Take control of 1 of our fairy tale cars and determine how the story continues in this interactive car game.</string>
 </resources>

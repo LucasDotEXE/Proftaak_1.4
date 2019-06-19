@@ -7,4 +7,15 @@
     <string name="soundtitle">Klingen</string>
     <string name="languagetitle">Sprache</string>
     <string name="aboutustitle">Über uns</string>
+    <string name="logo">logo</string>
+    <string name="logorond">loground</string>
+    <string name="huidige_wedstrijden">aktuelle spiele</string>
+    <string name="hoe_werkt_dit">wie funktioniert das?</string>
+    <string name="welkom_bij_de_esseteleague">wilkommen in der Essteleague</string>
+    <string name="welkom_bij_de_essteleague_ga_ten_strijde_met_u_favoriete_sprookjes_characters_over_de_uikom_van_het_verhaal_selecteer_u_character_en_zorg_ervoor_dat_het_sprookje_goed_afloop">" Willkommen in der Essteleague. Kämpfe mit deinen Lieblingsmärchenfiguren über die Geschichte der Geschichte. Wähle den Charakter U und stelle sicher, dass das Märchen gut endet."</string>
+    <string name="nieuws">nachtrichten</string>
+    <string name="play">Spielen</string>
+    <string name="button">Schaltfläche</string>
+    <string name="neem_controle_over_1_van_onze_sprookjes_auto_s_en_bepaal_hoe_het_verhaal_zich_verder_afspeel_in_dit_interactieve_autospel">Übernimm die Kontrolle über eines unserer Märchenautos und bestimme, wie die Geschichte in diesem interaktiven Autospiel weitergeht.</string>
+    <string name="neem_controle_over_1_van_onze_sprookjes_auto_s_en_bepaal_hoe_het_verhaal_zich_verder_verloop">Übernimm die Kontrolle über eines unserer Märchenautos und bestimme, wie die Geschichte in diesem interaktiven Autospiel weitergeht.</string>
 </resources>

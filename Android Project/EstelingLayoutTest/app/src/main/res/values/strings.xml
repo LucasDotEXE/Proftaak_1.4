@@ -10,18 +10,18 @@
     <string name="huidige_wedstrijden">Huidige wedstrijden</string>
     <string name="nieuws">Nieuws</string>
     <string name="logo">logo</string>
-    <string name="yeet">yeet</string>
-    <string name="ho_werkt_dit">ho werkt dit</string>
-    <string name="logoround">logoround</string>
-    <string name="textview">TextView</string>
-    <string name="play">Play</string>
-    <string name="essteling_logo">Essteling_logo</string>
-    <string name="button">Button</string>
+    <string name="yeet" translatable="false">yeet</string>
+    <string name="hoe_werkt_dit">hoe werkt dit</string>
+    <string name="logorond">logorond</string>
+    <string name="textview" translatable="false">TextView</string>
+    <string name="play">Speel</string>
+    <string name="essteling_logo" translatable="false">Essteling_logo</string>
+    <string name="button">Knop</string>
     <string name="welkom_bij_de_esseteleague">welkom bij de Esseteleague</string>
-    <string name="welkom_bij_de_essteleague_ga_ten_strijde_met_u_favoriete_sprookjes_characters_over_de_uikom_van_het_verhaal_selecteer_u_character_en_zorg_ervoor_dat_het_sprookje_goed_afloop">welkom bij de Essteleague. ga ten strijde met U favoriete sprookjes characters over de uikom van het verhaal. selecteer U character en zorg ervoor dat het sprookje goed afloop.</string>
-    <string name="yeetus_deletus">YEETUS DELETUS</string>
+    <string name="welkom_bij_de_essteleague_ga_ten_strijde_met_u_favoriete_sprookjes_characters_over_de_uikom_van_het_verhaal_selecteer_u_character_en_zorg_ervoor_dat_het_sprookje_goed_afloop">welkom bij de Essteleague. ga ten strijde met U favoriete sprookjes characters over de uikom van het verhaal. selecteer U character en zorg ervoor dat het sprookje goed afloopt.</string>
+    <string name="yeetus_deletus" translatable="false">YEETUS DELETUS</string>
     <string name="neem_controle_over_1_van_onze_sprookjes_auto_s_en_bepaal_hoe_het_verhaal_zich_verder_verloop">neem controle over 1 van onze sprookjes auto\'s en bepaal hoe het verhaal zich verder verloop.</string>
-    <string name="todo">TODO</string>
+    <string name="todo" translatable="false">TODO</string>
     <string name="neem_controle_over_1_van_onze_sprookjes_auto_s_en_bepaal_hoe_het_verhaal_zich_verder_afspeel_in_dit_interactieve_autospel">Neem controle over 1 van onze sprookjes auto’s en bepaal hoe het verhaal zich verder afspeel in dit interactieve autospel.</string>
     <string name="baron" translatable="false">Baron</string>
     <string name="bob" translatable="false">Bob</string>
