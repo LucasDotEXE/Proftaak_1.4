@@ -7,4 +7,6 @@
     <string name="soundtitle">Klingen</string>
     <string name="languagetitle">Sprache</string>
     <string name="aboutustitle">Über uns</string>
+    <string name="ca_fastHint">.</string>
+    <string name="daa_playat">.</string>
 </resources>

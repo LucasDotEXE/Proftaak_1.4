@@ -2,28 +2,57 @@ package com.example.esstelleague;
 
 import java.io.Serializable;
 
+/**
+ * @author Daphne
+ * @author Lucas
+ * The Attraction class is used to store data, such as an image, and parse to the detailed activity.
+ */
+
 public class Attraction implements Serializable {
 
     private String mName, mImageUrl;
     private int mDetails;
 
-    public Attraction(String mName, String imageUrl, int detailStringRecource) {
+    /**
+     * @param mName Attaction name
+     * @param imageUrl Image URL
+     * @param detailStringRecource Detailed String resource
+     */
+
+    Attraction(String mName, String imageUrl, int detailStringRecource) {
         this.mName = mName;
         this.mImageUrl = imageUrl;
         this.mDetails = detailStringRecource;
     }
 
-    public String getmName() {
+    /**
+     * @return Name of the attraction.
+     */
+
+    String getmName() {
         return mName;
     }
 
-    public String getmImageUrl() {
+    /**
+     * @return Image URL.
+     */
+
+    String getmImageUrl() {
         return mImageUrl;
     }
 
-    public int getmDetails() {
+    /**
+     * @return Detailed String.
+     */
+
+    int getmDetails() {
         return mDetails;
     }
+
+    /**
+     * ToString() method for debugging purposes.
+     * @return String for debug purposes.
+     */
 
     @Override
     public String toString() {

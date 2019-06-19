@@ -10,18 +10,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.Switch;
 
-public class SettingsFragment extends Fragment {
+/**
+ * @author Tom
+ * The SettingsFragment class introduces a few settings such as dark theme.
+ */
 
+public class SettingsFragment extends Fragment {
     private Switch mDarkTheme;
     private Switch mHints;
     private Switch mSound;
     private Button mAboutUs;
 
 
-    //Author: Tom
+    /**
+     * onCreateView method is created by extending fragment.
+     * @param inflater LayoutInflater object.
+     * @param container ViewGroup container object.
+     * @param savedInstanceState Bundle object (savedInstanceState).
+     * @return View object.
+     */
 
     @Nullable
     @Override
@@ -59,7 +68,9 @@ public class SettingsFragment extends Fragment {
         return view;
     }
 
-    //method for forcing a refresh of the fragment, used to activate darktheme
+    /**
+     * method for forcing a refresh of the fragment, used to activate darktheme.
+     */
     public void refresh() {
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);

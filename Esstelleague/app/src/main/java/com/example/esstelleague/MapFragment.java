@@ -8,6 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+/**
+ * @author Daphne
+ * Container for the corresponding PhotoView XML file, which enables scrolling through the Essteling map.
+ */
+
 public class MapFragment extends Fragment {
 
     @Nullable

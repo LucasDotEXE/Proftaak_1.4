@@ -16,14 +16,26 @@ import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
+/**
+ * @author Lucas
+ * @author Dustin
+ * The ControlActivity class enables controlling a car using MQTT.
+ */
+
 public class ControlActivity extends AppCompatActivity {
     private static final String TAG = "ControlActivity";
 
     private MQTT mMQTT_Client;
-    private int mCarID = 1;
+    private int mCarID = -1;
     private Direction mLastDir =Direction.STOP;
 
     private ArrayList<CircleImageView> cars;
+
+    /**
+     * OnCreate method of interface.
+     * @param savedInstanceState Bundle obj.
+     */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,12 +54,20 @@ public class ControlActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Rotate the speed slider so it is vertical and not horizontal.
+     */
+
     private void setSeekBar() {
         ConstraintLayout activityControls = (ConstraintLayout) findViewById(R.id.sb_speedslider);
         activityControls.setRotation(-90f);
         activityControls.setTranslationX(-250);
         activityControls.requestLayout();
     }
+
+    /**
+     * Set all button actions
+     */
 
     private void setButtonActions() {
         ImageButton forward = this.findViewById(R.id.forward);
@@ -57,7 +77,7 @@ public class ControlActivity extends AppCompatActivity {
         ImageButton right = this.findViewById(R.id.right);
 
         ImageView info = findViewById(R.id.Info);
-        info.setOnClickListener(v -> Toast.makeText(getApplicationContext(), "The slider controls speed", Toast.LENGTH_LONG).show());
+        info.setOnClickListener(v -> Toast.makeText(getApplicationContext(), R.string.ca_fastHint, Toast.LENGTH_LONG).show());
 
         forward.setOnClickListener(getClickListener(Direction.FORWARD, R.id.forward));
         back.setOnClickListener(getClickListener(Direction.BACKWARDS, R.id.back));
@@ -107,6 +127,12 @@ public class ControlActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Make background of image EsstelingRed (which is a dedicated color).
+     * @param car Specifies the selection window.
+     * @return Runnable for new Thread.
+     */
+
     private Runnable setSelectedbackground(CircleImageView car) {
         return () -> {
             for (CircleImageView view : this.cars) {
@@ -119,8 +145,12 @@ public class ControlActivity extends AppCompatActivity {
         };
     }
 
-
-
+    /**
+     * Track control actions of the user.
+     * @param action Specifies the direction.
+     * @param id Specifies the id of the image button.
+     * @return ClickListener.
+     */
 
     private View.OnClickListener getClickListener(final Direction action, int id) {
         return v -> {
@@ -147,6 +177,11 @@ public class ControlActivity extends AppCompatActivity {
             action(action, mSB_Speed.getProgress());
         };
     }
+
+    /**
+     * @param action Defines the direction the vehicle should move.
+     * @param speed Defines the speed of the vehicle.
+     */
 
     private void action(Direction action, int speed) {
 
@@ -179,6 +214,14 @@ public class ControlActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * JSON format to send to vehicle.
+     * @param left Left wheel speed.
+     * @param right Right wheel speed.
+     * @param speed Speed multiplier.
+     * @return JSON "payload" string.
+     */
+
     private String getJsonFormat(double left, double right, int speed) {
         return "{\"JSONFILE\": " +
                 "{\"Vehicle\":" + mCarID + ", " +
@@ -187,14 +230,22 @@ public class ControlActivity extends AppCompatActivity {
                 "}";
     }
 
+    /**
+     * Publish a MQTT message.
+     * @param msg publishMessage for MQTT using the MQTT class.
+     */
 
     public void publishMessage(String msg) {
-        if (!msg.isEmpty() && mMQTT_Client.checkConnected())
+        if (!msg.isEmpty() && mMQTT_Client.checkConnected() && mCarID!=-1)
             mMQTT_Client.publish(msg);
         else if (!mMQTT_Client.checkConnected())
             mMQTT_Client.connect();
+        else if (mCarID==-1) Toast.makeText(this, getResources().getString(R.string.ca_selectvehicle), Toast.LENGTH_LONG).show();
     }
 
+    /**
+     * Specifies a direction for the vehicle.
+     */
 
     private enum Direction {
         FORWARD, BACKWARDS, STOP, LEFT, RIGHT

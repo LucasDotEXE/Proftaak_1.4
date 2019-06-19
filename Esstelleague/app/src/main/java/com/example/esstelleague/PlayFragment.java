@@ -11,7 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import java.util.ArrayList;
 
-
+/**
+ * @author daphne
+ * PlayFragment which loads the recyclerView.
+ */
 
 public class PlayFragment extends Fragment {
 
@@ -19,6 +22,14 @@ public class PlayFragment extends Fragment {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private ArrayList<Attraction> mDataset;
+
+    /**
+     * onCreateView method is created by extending Fragment.
+     * @param inflater LayoutInflater object.
+     * @param container ViewGroup container object.
+     * @param savedInstanceState Bundle obj. savedInstanceState.
+     * @return View object.
+     */
 
     @Nullable
     @Override

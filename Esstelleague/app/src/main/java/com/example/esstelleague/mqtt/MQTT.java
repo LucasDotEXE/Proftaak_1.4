@@ -14,6 +14,11 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 
 import java.io.UnsupportedEncodingException;
 
+/**
+ * @author Dustin
+ * The MQTT class enables connecting with a vehicle, it has a few public methods, which are used to connect, publish and check the connection.
+ */
+
 public class MQTT {
     private static final String TAG = "MqttHelper";
 
@@ -21,9 +26,17 @@ public class MQTT {
     private Context mAppContext;
     private boolean mConnected;
 
+    /**
+     * @param mAppContext appContext so a toast message can be made.
+     */
+
     public MQTT(Context mAppContext) {
         this.mAppContext = mAppContext;
     }
+
+    /**
+     * Connect to a MQTT server using specified String located in MQTT_SettingsEnvironment.
+     */
 
     public void connect() {
         String clientId = MqttClient.generateClientId();
@@ -52,9 +65,18 @@ public class MQTT {
         }
     }
 
+    /**
+     * Check the connection
+     * @return Whether a connection is present.
+     */
+
     public boolean checkConnected() {
         return this.mConnected;
     }
+
+    /**
+     * @return MQTT options which specify the username and password.
+     */
 
     private MqttConnectOptions getOptions() {
         MqttConnectOptions mqttConnectOptions = new MqttConnectOptions();
@@ -62,6 +84,11 @@ public class MQTT {
         mqttConnectOptions.setPassword(MQTT_SettingsEnvironment.sMQTT_passwd.toCharArray());
         return mqttConnectOptions;
     }
+
+    /**
+     * Publishes a message on the MQTT server on the selected topic.
+     * @param payload (JSON) String you want to send.
+     */
 
     public void publish(String payload) {
         byte[] mEncodedPayload = new byte[0];

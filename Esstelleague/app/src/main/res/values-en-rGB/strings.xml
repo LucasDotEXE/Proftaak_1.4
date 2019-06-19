@@ -7,4 +7,7 @@
     <string name="soundtitle">Sound</string>
     <string name="languagetitle">Language</string>
     <string name="aboutustitle">About us</string>
+    <string name="ca_fastHint">The slider controls the speed</string>
+    <string name="daa_playat">Play at</string>
+    <string name="ca_selectvehicle">First select your fairy tale mobile first</string>
 </resources>

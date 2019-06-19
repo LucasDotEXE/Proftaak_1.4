@@ -3,9 +3,13 @@ package com.example.esstelleague;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+/**
+ * @author Tom
+ * The AboutUsActivity sets a theme to normal or dark mode depending on the selected setting.
+ */
+
 public class AboutUsActivity extends AppCompatActivity {
-    //author: Tom
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -8,14 +8,18 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toast;
+
+/**
+ * @author Tom
+ * @author Lucas
+ * MainActivity is the first activity that loads, and initializes the navigation and button actions.
+ * Tom: Fragments are static so they can be used in another class.
+ */
 
 public class MainActivity extends AppCompatActivity {
 
-    //authors: Tom, Lucas
-
     public static MainActivity MAIN_ACTIVITY;
-
-    //Tom: Fragments are static so they can be used in other classes
     public static Fragment CURRENT_FRAGMENT = new HomeFragment();
     public static Fragment HOME_FRAGMENT = new HomeFragment();
     public static Fragment MAP_FRAGMENT = new MapFragment();
@@ -24,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
     public static boolean HINTS = true;
     public static boolean SOUND = true;
     public static boolean DARKTHEME = false;
+
+    /**
+     * OnCreate method implemented by extending AppCompatActivity
+     * @param savedInstanceState Bundle obj. savedInstanceState.
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,17 +46,23 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
-
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 CURRENT_FRAGMENT).commit();
     }
+
+    /**
+     * Reload a fragment.
+     */
 
     public void reload() {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 CURRENT_FRAGMENT).commit();
     }
 
-    //Tom: no new fragments are made after the initial fragments to allow proper usage of themes
+    /**
+     * Init navigation actions.
+     * Tom: No new fragments are made after the initial fragments to allow proper usage of themes.
+     */
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
@@ -71,7 +86,6 @@ public class MainActivity extends AppCompatActivity {
                     CURRENT_FRAGMENT = selectedFragment;
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                             selectedFragment).commit();
-
                     return true;
                 }
             };

@@ -1,6 +1,5 @@
 package com.example.esstelleague;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -10,9 +9,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+/**
+ * @author Pascal
+ * HomeFragment is the container fragment for the home screen (which is a XML-file).
+ */
+
 public class HomeFragment extends Fragment {
 
-
+    /**
+     * @param inflater LayoutInflater object.
+     * @param container ViewGroup container object.
+     * @param savedInstanceState Bundle savedInstanceState object.
+     * @return Return the view.
+     */
 
     @Nullable
     @Override

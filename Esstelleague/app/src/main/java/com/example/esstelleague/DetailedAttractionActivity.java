@@ -8,7 +8,17 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class DetailedAtractieActivity extends AppCompatActivity {
+/**
+ * @author Lucas
+ * The DetailedAttractionActivity opens a detailed screen when an image in the RecyclerVIew has been clicked.
+ */
+
+public class DetailedAttractionActivity extends AppCompatActivity {
+
+    /**
+     * OnCreate method by extending AppCompatActivity.
+     * @param savedInstanceState Bundle obj. savedInstanceState.
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,17 +32,17 @@ public class DetailedAtractieActivity extends AppCompatActivity {
         }
         setContentView(R.layout.activity_detailed_atractie);
 
-        Attraction gwb = (Attraction) getIntent().getSerializableExtra("GWB_OBJECT");
+        Attraction attraction = (Attraction) getIntent().getSerializableExtra("ATTRACTION_OBJECT");
 
         ImageView banner = findViewById(R.id.atractie_banner);
         TextView naam = findViewById(R.id.atractie_naam);
         TextView detail = findViewById(R.id.atractie_detail);
-        naam.setText(gwb.getmName());
-        detail.setText(getText(gwb.getmDetails()));
+        naam.setText(attraction.getmName());
+        detail.setText(getText(attraction.getmDetails()));
 
         Button play = findViewById(R.id.atractie_play);
 
-        play.setText("Play at: " + gwb.getmName());
+        play.setText(getResources().getString(R.string.daa_playat)+" "+attraction.getmName());
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,12 +56,12 @@ public class DetailedAtractieActivity extends AppCompatActivity {
             }
         });
 
-        int resid = getResources().getIdentifier(
-                gwb.getmImageUrl(),
+        int resId = getResources().getIdentifier(
+                attraction.getmImageUrl(),
                 "drawable",
                 getPackageName()
         );
 
-        banner.setImageResource(resid);
+        banner.setImageResource(resId);
     }
 }

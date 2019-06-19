@@ -15,46 +15,78 @@ import java.util.ArrayList;
 
 import static android.content.ContentValues.TAG;
 
-public class AttractionAdapter extends RecyclerView.Adapter<AttractionAdapter.AttractieViewHolder> {
+/**
+ * @author Daphne
+ * @author Lucas
+ * With the AttractionAdapter a recyclerView can be made.
+ */
+
+public class AttractionAdapter extends RecyclerView.Adapter<AttractionAdapter.AttractionViewHolder> {
 
     private ArrayList<Attraction> mDataset;
     private Context mContext;
 
-    public AttractionAdapter(ArrayList<Attraction> mDataset, Context mContext) {
+    /**
+     * @param mDataset List of Attraction instances.
+     * @param mContext Application context.
+     */
+
+    AttractionAdapter(ArrayList<Attraction> mDataset, Context mContext) {
         this.mDataset = mDataset;
         this.mContext = mContext;
     }
 
+    /**
+     * ViewHolder for in the RecyclerView
+     * @param parent Parent obj.
+     * @param viewType ViewType obj.
+     * @return new AttractionViewHolder which contains the attraction.
+     */
+
     @NonNull
     @Override
-    public AttractieViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public AttractionViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.activity_item, parent, false);
-        return new AttractieViewHolder(view);
+        return new AttractionViewHolder(view);
     }
 
+    /**
+     * Bind the viewHolder.
+     * @param holder AttractionViewHolder object.
+     * @param position Position of the adapter.
+     */
+
     @Override
-    public void onBindViewHolder(@NonNull AttractieViewHolder holder, int position) {
-        Log.d(TAG, "onBindViewHolder: ISNULL? " + (holder.mAttractie == null));
+    public void onBindViewHolder(@NonNull AttractionViewHolder holder, int position) {
+        Log.d(TAG, "onBindViewHolder: ISNULL? " + (holder.mAttraction == null));
         int resid = holder.itemView.getResources().getIdentifier(mDataset.get(holder.getAdapterPosition()).getmImageUrl(), "drawable", holder.itemView.getContext().getPackageName());
         Attraction attractie = mDataset.get(position);
-        holder.mAttractie.setText(attractie.getmName());
+        holder.mAttraction.setText(attractie.getmName());
         holder.mImageView.setImageResource(resid);
     }
+
+    /**
+     * @return Size of the dataset.
+     */
 
     @Override
     public int getItemCount() {
         return mDataset.size();
     }
 
-    public class AttractieViewHolder extends RecyclerView.ViewHolder {
+    /**
+     * AttractionViewHolder for in the RecyclerView.
+     */
 
-        public TextView mAttractie;
-        public ImageView mImageView;
+    class AttractionViewHolder extends RecyclerView.ViewHolder {
 
-        public AttractieViewHolder(View itemView) {
+        TextView mAttraction;
+        ImageView mImageView;
+
+        AttractionViewHolder(View itemView) {
             super(itemView);
-            mAttractie = itemView.findViewById(R.id.mName);
+            mAttraction = itemView.findViewById(R.id.mName);
             mImageView = itemView.findViewById(R.id.rv_item);
 
             itemView.setOnClickListener(view -> {
@@ -62,19 +94,16 @@ public class AttractionAdapter extends RecyclerView.Adapter<AttractionAdapter.At
                 itemView.postOnAnimationDelayed(() -> {
                     Intent intent = new Intent(
                             view.getContext(),
-                            DetailedAtractieActivity.class);
-                    Log.i("POSITION", "" + AttractieViewHolder.super.getAdapterPosition());
+                            DetailedAttractionActivity.class);
+                    Log.i("POSITION", "" + AttractionViewHolder.super.getAdapterPosition());
 
-                // Get GWB object waarop is geclicked
-                Attraction gwb = mDataset.get(AttractieViewHolder.super.getAdapterPosition());
-                intent.putExtra("GWB_OBJECT", gwb);
+                Attraction attraction = mDataset.get(AttractionViewHolder.super.getAdapterPosition());
+                intent.putExtra("ATTRACTION_OBJECT", attraction);
                 if (MainActivity.DARKTHEME) {
                     intent.putExtra("theme", "dark");
                 } else {
                     intent.putExtra("theme", "light");
                 }
-
-
                     // Start de nieuwe activity
                     view.getContext().startActivity(intent);
                 }, 1000);

@@ -1,7 +1,11 @@
 package com.example.esstelleague.mqtt;
 
-public class MQTT_SettingsEnvironment {
-    public int CAR_ID = 1;
+/**
+ * @author Dustin
+ * MQTT_SettingsEnvironment maintains all strings to connect with out router.
+ */
+
+class MQTT_SettingsEnvironment {
     static final String sMQTT_username = "B1";
     static final String sMQTT_passwd = "PROFTAAKGROEPB1";
     static final String sMQTT_topic = "PROFTAAKGROEPB1";
