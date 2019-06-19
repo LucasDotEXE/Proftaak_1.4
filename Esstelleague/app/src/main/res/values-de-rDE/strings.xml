@@ -7,10 +7,25 @@
     <string name="soundtitle">Klingen</string>
     <string name="languagetitle">Sprache</string>
     <string name="aboutustitle">Über uns</string>
-    <string name="ca_fastHint">.</string>
-    <string name="daa_playat">.</string>
-    <string name="ca_selectvehicle">.</string>
-    <string name="mqtt_connect">.</string>
-    <string name="mqtt_connect_error">.</string>
-    <string name="mqtt_connect_suc">.</string>
+    <string name="ca_fastHint">Der Schieberegler steuert die Geschwindigkeit</string>
+    <string name="daa_playat">Spiel mit</string>
+    <string name="ca_selectvehicle">Wählen Sie zuerst Ihr Märchen-Handy</string>
+    <string name="mqtt_connect">Zu verbinden...</string>
+    <string name="mqtt_connect_error">Verbindung fehlgeschlagen</string>
+    <string name="mqtt_connect_suc">Verbunden</string>
+    <string name="neem_controle_over_1_van_onze_sprookjes_auto_s_en_bepaal_hoe_het_verhaal_zich_verder_afspeel_in_dit_interactieve_autospel" translatable="false">Übernimm die Kontrolle über eines unserer Märchenautos und bestimme, wie die Geschichte in diesem interaktiven Autospiel weitergeht</string>
+    <string name="nieuws">Nachrichten</string>
+    <string name="play">Spielen</string>
+    <string name="rv_baron">"Um die Mine zu betreten, lässt Baron 1898 Sie 37,5 Meter nach unten fallen! Versuchen Sie schnell, das Gold im unterirdischen Korridor zu sammeln, bevor die White Wieven Ihre Chance auf Reichtum sabotieren.  "</string>
+    <string name="rv_bob">Mit einer Geschwindigkeit von 60 km / h runter? Schwingen Sie sich durch Kurven und spüren Sie, wie der Wind an Ihrem Gesicht vorbei gleitet. Auf der Bobbahn zittert man auch ohne Schnee. Die Bobbahn ist eine 524 m lange Bobbahn und für alle Draufgänger geeignet. Grundsätzlich ist jeder in dieser Attraktion erlaubt, Kinder unter 1,20 m müssen jedoch von einem Erwachsenen begleitet werden und diese Attraktion ist nicht für schwangere Frauen geeignet. Für Leute, die sich nur in diese Attraktion wagen, gibt es eine spezielle \"Single Rider Queue\". Die Bobbahn ist bei schönem Wetter geöffnet.</string>
+    <string name="rv_dezwevendebelg">Trotz der schlechten Wetterbedingungen segelte Kapitän Seppe van der Decken mit seinem Schiff De Zwevende Belg auf der Suche nach Wohlstand. Seine Gier war so groß, dass er seiner Crew befahl, am Ostersonntag zu segeln, obwohl dies verboten war. Seitdem ist jeder an Bord dazu verdammt, für immer auf den sieben Meeren zu segeln. Bis heute ist das Schiff mit seinen leuchtend roten Segeln überall auf der Welt zu sehen ... Es heißt jetzt De Zwevende Belg!</string>
+    <string name="rv_droomvlucht">Einhörner und Waldtiere werden in dieser bezaubernden Welt lebendig. Und wenn die Nacht hereinbricht, schweben die Städte schwerelos durch die Dunkelheit. Bis das Tageslicht zurückkehrt und alle im bezaubernden Wald in dieser Indoor-Attraktion Dream Flight wieder glücklich aufwachen.</string>
+    <string name="rv_fatamorgana">Ein prächtiger Schatz verbirgt sich tief im Ostpalast. Und während der Sultan sich mit Pracht umgibt, füllen sich die dunklen Gefängnisse mit Kriminellen und Ratten. Verbringen Sie einige Zeit auf dem Wasser und sehen Sie sich alle Arten von östlichen Szenen an. Ein Boot bringt Sie durch Stadtteile voller Armut, aber auch Wohlstand. Und ein Riese beschützt den wertvollsten Besitz des Sultans: seine Edelsteine, silbernen Leuchter und Goldstücke.</string>
+    <string name="rv_festivaloveral">Teilen Sie Freude und Glück miteinander und treffen Sie glückliche Menschen. Jokie und Jet nehmen Sie mit auf eine Reise in verschiedene Länder! Lernen Sie verschiedene Kulturen kennen und feiern Sie mit allen roten Nasen der Welt. Entdecken Sie die Unterschiede und Gemeinsamkeiten in Festival Everywhere.</string>
+    <string name="rv_johanendeeenhoorn">Besiege das Einhorn, das das Königreich verwüstet. Alle Krieger sind aufgefordert, einen der Plätze zu wählen und das Biest mit \"Wasser\" oder \"Feuer\" zu besiegen. Wer es am schnellsten schafft, bekommt nach einer Fahrt in dieser hölzernen Rennachterbahn alle Ehre.</string>
+    <string name="rv_monsieurcannibale">Auf der Insel Monsieur Cannibale drehen sich große Kochkessel ständig über einem knisternden Feuer. Jeder, der an Land geht, kann in diesem schwindelerregenden Abenteuer Platz nehmen, bis er den Kannibalen um Gnade bittet. Sie und die ganze Familie sind eingeladen, sich in die Kochtöpfe von Monsieur Cannibale zu setzen. Auch wenn es regnet, brennt das Feuer dieser Indoor-Attraktion.</string>
+    <string name="rv_python">Entkomme dem rotierenden Würgegriff der Python, der in Frieden auf dich wartet. Überleben Sie die Wickelbewegungen in großer Höhe in dieser Stahlachterbahn mit Doppelschlaufe und Korkenzieher.</string>
+    <string name="rv_symbolica">Erleben Sie die überdachte Familienattraktion Symbolica, einen bezaubernden Palast, in dem die Fantasie zum Leben erweckt wird. Gehen Sie mit dem König auf eine Audienz. Tovernar Pardoes sorgt dafür, dass jeder Besuch überraschend und bezaubernd ist. Schlendern Sie durch die geheimen Korridore und magischen Räume und fallen Sie von einer Überraschung zur nächsten.</string>
+    <string name="rv_vogelrok">Vogel Rock nimmt Sie mit! Sie erleben einen haarsträubenden Flug im Dunkeln in seinen Krallen. Auf Schlangen durch die Dunkelheit, bis der riesige Raubvogel mit der Kraft von hundert Löwen sein Nest erreicht hat. Erleben Sie das Abenteuer wie Sinbad the Zeeman.</string>
+    <string name="aboutuscontent" translatable="false">Wir sind ein Studententeam der Essteling. Wir bauen die Applikation Essteling, um das Warten in der Warteschlange etwas interessanter zu machen.</string>
 </resources>
