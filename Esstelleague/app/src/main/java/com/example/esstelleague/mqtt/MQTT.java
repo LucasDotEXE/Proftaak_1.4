@@ -4,6 +4,8 @@ import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.esstelleague.R;
+
 import org.eclipse.paho.android.service.MqttAndroidClient;
 import org.eclipse.paho.client.mqttv3.IMqttActionListener;
 import org.eclipse.paho.client.mqttv3.IMqttToken;
@@ -43,18 +45,18 @@ public class MQTT {
         mClient = new MqttAndroidClient(mAppContext, "tcp://"+ MQTT_SettingsEnvironment.sMQTT_broker_IP, clientId);
         try {
             IMqttToken token = mClient.connect(getOptions());
-            Toast.makeText(mAppContext, "Connecting", Toast.LENGTH_LONG).show();
+            Toast.makeText(mAppContext, mAppContext.getResources().getString(R.string.mqtt_connect), Toast.LENGTH_LONG).show();
             this.mConnected=false;
             token.setActionCallback(new IMqttActionListener() {
                 @Override
                 public void onSuccess(IMqttToken asyncActionToken) {
-                    Toast.makeText(mAppContext, "Connected", Toast.LENGTH_LONG).show();
+                    Toast.makeText(mAppContext, mAppContext.getResources().getString(R.string.mqtt_connect_suc), Toast.LENGTH_LONG).show();
                     Log.d(TAG, "onSuccess: CONNECTED");
                     MQTT.this.mConnected=true;
                 }
                 @Override
                 public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
-                    Toast.makeText(mAppContext, "Failed to connect", Toast.LENGTH_LONG).show();
+                    Toast.makeText(mAppContext, mAppContext.getResources().getString(R.string.mqtt_connect_error), Toast.LENGTH_LONG).show();
                     Log.d(TAG, "onFailure: FAILED TO CONNECT");
                     MQTT.this.mConnected=false;
                 }

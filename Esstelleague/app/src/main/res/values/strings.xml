@@ -33,4 +33,7 @@
     <string name="ca_fastHint">De schuifregelaar bepaalt de snelheid</string>
     <string name="daa_playat">Speel bij</string>
     <string name="ca_selectvehicle">Kies eerst je sprookjesmobiel</string>
+    <string name="mqtt_connect">Verbinden...</string>
+    <string name="mqtt_connect_suc">Verbonden</string>
+    <string name="mqtt_connect_error">Verbinden mislukt</string>
 </resources>

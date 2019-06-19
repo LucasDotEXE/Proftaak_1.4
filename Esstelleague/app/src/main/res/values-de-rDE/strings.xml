@@ -9,4 +9,8 @@
     <string name="aboutustitle">Über uns</string>
     <string name="ca_fastHint">.</string>
     <string name="daa_playat">.</string>
+    <string name="ca_selectvehicle">.</string>
+    <string name="mqtt_connect">.</string>
+    <string name="mqtt_connect_error">.</string>
+    <string name="mqtt_connect_suc">.</string>
 </resources>
