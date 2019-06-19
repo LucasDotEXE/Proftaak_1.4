@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 /**
  * @author Daphne
+ * @author Pascal
  * Container for the corresponding PhotoView XML file, which enables scrolling through the Essteling map.
  */
 
