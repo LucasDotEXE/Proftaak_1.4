@@ -18,6 +18,7 @@ import java.io.UnsupportedEncodingException;
 
 /**
  * @author Dustin
+ * @author Lucas
  * The MQTT class enables connecting with a vehicle, it has a few public methods, which are used to connect, publish and check the connection.
  */
 
